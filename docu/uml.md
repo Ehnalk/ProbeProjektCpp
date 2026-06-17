@@ -32,10 +32,10 @@ classDiagram
 
     class BotTyp {
         <<enumeration>>
-        ZUFALL
-        LEICHT
-        MITTEL
-        SCHWER
+        Horizontal
+        Vertical
+        Random
+        Smart
     }
 
     class Bot {
