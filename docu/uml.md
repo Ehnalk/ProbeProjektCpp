@@ -26,7 +26,7 @@ classDiagram
         -Chip color
         +Player(string name, Chip color)
         +string getName() const
-        +CHip getColor() const
+        +Chip getColor() const
         +int chooseSapce(Field field) virtual
     }
 
