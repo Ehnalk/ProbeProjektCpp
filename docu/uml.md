@@ -13,7 +13,7 @@ classDiagram
         -int column
         -vector~vector~Chip~~ grid
         +Field(int row, int column)
-        +bool putChip(int column, Chip chip)
+        +bool putChip(int column, Player player)
         +bool isColumnFull(int column) const
         +bool isFull() const
         +Chip checkForWin() const

@@ -5,6 +5,7 @@
 class Chip {
 public:
     Chip(std::string color);
+    Chip();
     ~Chip();
     void setColor(std::string color);
     std::string getColor();
