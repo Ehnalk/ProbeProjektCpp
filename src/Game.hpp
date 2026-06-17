@@ -8,12 +8,16 @@ class Game {
 public:
     Game();
     ~Game();
-    void play();
+    void start();
+    void nextMove();
+    bool isGameOver() const;
 
 private:
     Field field;
-    Player* players[2];
-    int currentPlayer;
+    const Player* player1;
+    const Player* player2;
+    Player* currentPlayer;
+
 };
 
 #endif // GAME_HPP
