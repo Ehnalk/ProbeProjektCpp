@@ -4,6 +4,10 @@ Chip::Chip(std::string color) {
     setColor(color);
 }
 
+Chip::Chip() {
+    color = "";
+}
+
 bool Chip::isEmpty() {
     return color == "";
 }
