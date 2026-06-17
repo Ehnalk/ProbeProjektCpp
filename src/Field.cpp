@@ -29,7 +29,7 @@ bool Field::putChip(int column, const Player& player) {
     }
     for (int i = row - 1; i >= 0; i--) {
         if (grid[i][column].isEmpty()) {
-            grid[i][column].setColor(player.getColor()); // TODO CHANGE
+            grid[i][column].setColor(player.getChip()); // TODO CHANGE
             return true;
         }
     }
