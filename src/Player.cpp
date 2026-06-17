@@ -16,10 +16,3 @@ Player::~Player()
 {
     std::cout << "Player destroyed." << std::endl;
 }
-
-int Player::chooseSpace(Field field)
-{
-    // This function should contain logic to allow the player to choose a space on the field.
-    // For now, it will just return a placeholder value.
-    return 0; // Placeholder return value
-}

@@ -14,10 +14,10 @@ class Player
         ~Player();
         std::string getName() const { return name; }
         ChipColor getChip() const { return chip; }
-        int chooseSpace(Field field);
+        virtual int chooseSpace(Field field);
     protected:
         ChipColor chip;
-        const std::string name;
+        std::string name;
 };
 
 #endif // PLAYER_HPP

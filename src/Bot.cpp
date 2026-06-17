@@ -5,10 +5,10 @@ Bot::Bot()
     std::cout << "Bot created with default constructor. Select a chip and bot type." << std::endl;
 }
 
-Bot::Bot(std::string name, Chip chip, BotTyp botTyp) : Player(name, chip)
+Bot::Bot(std::string name, ChipColor chip, BotTyp botTyp) : Player(name, chip)
 {
     this->botTyp = botTyp;
-    std::cout << "Bot created with name: " << name << ", chip: " << chip.getColor() << " and bot type: " << static_cast<int>(botTyp) << std::endl;
+    std::cout << "Bot created with name: " << name << ", chip: " << static_cast<int>(chip) << " and bot type: " << static_cast<int>(botTyp) << std::endl;
 }
 
 Bot::~Bot()

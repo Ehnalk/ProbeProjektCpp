@@ -9,7 +9,7 @@ class Bot : public Player
 {
     public:
         Bot();
-        Bot(std::string name,Chip chip, BotTyp botTyp);
+        Bot(std::string name,ChipColor chip, BotTyp botTyp);;
         ~Bot();
     private:
         BotTyp botTyp;
