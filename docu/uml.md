@@ -1,33 +1,33 @@
 ```mermaid
 classDiagram
-    class Stein {
-        -string farbe
-        +Stein(string farbe)
-        +string getFarbe() const
-        +void setFarbe(string farbe)
-        +bool istLeer() const
+    class Chip {
+        -string color
+        +Chip(string farbe)
+        +string getColor() const
+        +void setColor(string color)
+        +bool isEmpty() const
     }
 
-    class Feld {
-        -int reihen
-        -int spalten
-        -vector~vector~Stein~~ gitter
-        +Feld(int reihen, int spalten)
-        +bool wirfStein(int spalte, Stein stein)
-        +bool istSpalteVoll(int spalte) const
-        +bool istVoll() const
-        +Stein pruefeGewinner() const
-        +void anzeigen() const
+    class Field {
+        -int row
+        -int column
+        -vector~vector~Chip~~ grid
+        +Field(int row, int column)
+        +bool putChip(int column, Chip chip)
+        +bool isColumnFull(int column) const
+        +bool isFull() const
+        +Chip checkForWin() const
+        +void show() const
     }
 
     class Player {
         <<abstract>>
         -string name
-        -Stein farbe
-        +Player(string name, Stein farbe)
+        -Chip color
+        +Player(string name, Chip color)
         +string getName() const
-        +Stein getFarbe() const
-        +int waehleSpalte(Feld feld) virtual
+        +Chip getColor() const
+        +int chooseSapce(Field field) virtual
     }
 
     class BotTyp {
@@ -40,26 +40,26 @@ classDiagram
 
     class Bot {
         -BotTyp typ
-        +Bot(string name, Stein farbe, BotTyp typ)
-        +int waehleSpalte(Feld feld) override
-        -int berechneZug(Feld feld) const
+        +Bot(string name, Chip color, BotTyp typ)
+        +int chooseColumn(Field field) override
+        -int calculateMove(Field field) const
     }
 
-    class Spiel {
-        -Feld feld
-        -Player* spieler1
-        -Player* spieler2
-        -Player* aktuellerSpieler
-        +Spiel(Player* s1, Player* s2)
+    class Game {
+        -Field field
+        -Player* player1
+        -Player* player2
+        -Player* currentPlayer
+        +Game(Player* s1, Player* s2)
         +void start()
-        +void naechsterZug()
-        +bool istSpielVorbei() const
+        +void nextMove()
+        +bool isGameOver() const
     }
 
     Player <|-- Bot
-    Feld "1" *-- "viele" Stein
+    Field "1" *-- "viele" Chip
     Bot "1" *-- "1" BotTyp
-    Spiel "1" *-- "1" Feld
-    Spiel "1" o-- "2" Player
+    Game "1" *-- "1" Field
+    Game "1" o-- "2" Player
 
 ```
