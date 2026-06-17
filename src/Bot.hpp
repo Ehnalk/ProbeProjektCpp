@@ -3,12 +3,13 @@
 
 #include "BotTyp.hpp"
 #include "Player.hpp"
+#include <string>
 
 class Bot : public Player
 {
     public:
         Bot();
-        Bot(Chip chip, BotTyp botTyp);
+        Bot(std::string name,Chip chip, BotTyp botTyp);
         ~Bot();
     private:
         BotTyp botTyp;

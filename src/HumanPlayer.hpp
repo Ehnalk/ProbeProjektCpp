@@ -7,8 +7,9 @@ class HumanPlayer : public Player
 {
     public:
         HumanPlayer();
-        HumanPlayer(Chip chip);
+        HumanPlayer(std::string name, Chip chip);
         ~HumanPlayer();
+    private:
 };
 
 #endif // HUMANPLAYER_HPP

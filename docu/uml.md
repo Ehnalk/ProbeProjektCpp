@@ -64,6 +64,7 @@ classDiagram
 
     Player <|-- Bot
     Player <|-- HumanPlayer
+    Player "1" *-- "1" Chip
     Field "1" *-- "viele" Chip
     Bot "1" *-- "1" BotTyp
     Game "1" *-- "1" Field
