@@ -38,6 +38,13 @@ classDiagram
         Smart
     }
 
+    class ChipColor {
+        <<enumeration>>
+        "x"
+        "o"
+    }
+
+
     class Bot {
         -BotTyp typ
         +Bot(string name, Chip color, BotTyp typ)
@@ -69,5 +76,7 @@ classDiagram
     Bot "1" *-- "1" BotTyp
     Game "1" *-- "1" Field
     Game "1" o-- "2" Player
+    Chip "1" *-- "1" ChipColor
+    Player "1" *-- "1" ChipColor
 
 ```
