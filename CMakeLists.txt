@@ -8,15 +8,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
+
 # Add an executable target named 'connect4' using all .cpp files in the current directory
 add_executable(connect4 
     app/main.cpp
-    src/Bot.cpp
-    src/Chip.cpp
-    src/Field.cpp
-    src/Game.cpp
-    src/HumanPlayer.cpp
-    src/Player.cpp
+    ${SOURCES}
 )
 
 target_include_directories(connect4 PRIVATE
