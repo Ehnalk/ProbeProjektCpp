@@ -8,7 +8,7 @@ class Field {
 public:
     Field(int row, int column);
     ~Field();
-    bool putChip(int column, Player player);
+    bool putChip(int column, const Player& player);
     bool isColumnFull(int column);
     bool isFull();
     void show();
