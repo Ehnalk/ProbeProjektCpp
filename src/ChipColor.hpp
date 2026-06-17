@@ -4,7 +4,8 @@
 enum class ChipColor
 {
     X,
-    O
+    O,
+    Empty
 };
 
 #endif // CHIPCOLOR_HPP

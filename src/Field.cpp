@@ -23,7 +23,7 @@ bool Field::isFull() {
     return true;
 }
 
-/*bool Field::putChip(int column, const Player& player) {
+bool Field::putChip(int column, const Player& player) {
     if (isColumnFull(column)) {
         return false;
     }
@@ -34,4 +34,4 @@ bool Field::isFull() {
         }
     }
     return false;
-}*/
+}

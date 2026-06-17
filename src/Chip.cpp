@@ -1,21 +1,17 @@
 #include "Chip.hpp"
 
-Chip::Chip(std::string color) {
+Chip::Chip(ChipColor color) {
     setColor(color);
 }
 
 Chip::Chip() {
-    color = "";
+    color = ChipColor::Empty;
 }
 
 bool Chip::isEmpty() {
-    return color == "";
+    return color == ChipColor::Empty;
 }
 
-void Chip::setColor(std::string color) {
-    if (color == "x" || color == "o" || color == "") {
-        this->color = color;
-    } else {
-        this->color = "";
-    }
+void Chip::setColor(ChipColor color) {
+    this->color = color;
 }
