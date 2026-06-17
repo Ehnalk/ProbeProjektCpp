@@ -45,6 +45,12 @@ classDiagram
         -int calculateMove(Field field) const
     }
 
+        class HumanPlayer {
+        +HumanPlayer(string name, Chip color)
+        +int chooseColumn(Field field) override
+        -int calculateMove(Field field) const
+    }
+
     class Game {
         -Field field
         -Player* player1
@@ -57,6 +63,7 @@ classDiagram
     }
 
     Player <|-- Bot
+    Player <|-- HumanPlayer
     Field "1" *-- "viele" Chip
     Bot "1" *-- "1" BotTyp
     Game "1" *-- "1" Field
