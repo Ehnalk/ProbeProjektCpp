@@ -12,6 +12,6 @@ public:
 
     private:
     std::string color; // color can be x, o, or empty
-}
+};
 
 #endif // CHIP_HPP
